@@ -33,11 +33,15 @@
     color: rgba(0, 255, 255, 0.493);
 }
 
-
+#navbarNav2
+{
+    position: relative;
+}
 .navbar-brand
 {   
 
     margin-inline:initial;
+    position: relative;
 }
 .columns
 {
@@ -50,7 +54,15 @@
 #title>p
 {
     background-color: transparent;
-    color: white;
+    color: rgb(255, 255, 255);
+}
+
+.nav-item>a:hover
+{
+    color: white!important;
+    background-color: rgba(255, 255, 255, 0.562);
+    
+    border-radius: 1vh;
 }
 
 #footer>.container-fluid
@@ -67,3 +79,28 @@
     margin-bottom: 2vh;
 }
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)
+{
+    .navbar-brand
+    {
+        position: absolute !important;
+    }
+    #navbarNav2
+    {
+        padding-left: 30%;
+    }
+    .navbar-brand>img
+    {
+        max-height: 15vh;
+    }
+    #navbarNav1
+    {
+        margin-right: 35vh;
+    }
+}
+
+@media only screen and (min-width: 768px) 
+{
+    
+}
