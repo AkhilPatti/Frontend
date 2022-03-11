@@ -34,6 +34,12 @@
     margin-right: -1%;
     max-height: fit-content;
 }
+#servicesBody
+{
+    font-size: 2vh;
+    word-spacing: 2px;
+    
+}
 
 #about>.row
 {
@@ -72,12 +78,6 @@
     margin:auto;
     text-align: center;
     margin-top: 6vh;
-}
-
-#title>p
-{
-    background-color: transparent;
-    color: rgb(255, 255, 255);
 }
 
 .nav-item>a:hover
@@ -153,14 +153,7 @@
     }
     
 }
-@media only screen and (max-width: 363px)
-{
-    #title>p
-    {
-        font-size:20px !important;
-        word-spacing: 3% !important;
-    }
-}
+
 @media only screen and (max-width : 290px)
 {
     #column>img
@@ -181,3 +174,19 @@
     }
 }
 
+@media only screen and (min-width:576px) and (max-width: 829px)
+{
+    #sevicesBody
+    {
+        margin-left: 84px;
+        max-width: 300px;;
+       
+    }
+}
+@media only screen and (max-width:306px)
+{
+    #serviceImgs>img
+    {
+        max-width: 218px;
+    }
+}
