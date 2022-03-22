@@ -1,0 +1,58 @@
+#Redirector-Stemware
+{
+    background-image: url(Data/promo_glass.png);
+    background-repeat: no-repeat;
+    background-position: bottom;    
+    background-position-x: left;
+    min-height:160px;
+}
+
+#Redirector-HomeAccents
+{
+    background-image: url(Data/promo_plates.png);
+    background-repeat: no-repeat;
+    background-position:bottom;
+    min-height:160px;
+}
+#Redirector-ClearenceItems
+{
+    background-image: url(Data/promo_album.png);
+    background-repeat: no-repeat;
+    min-height:160px;
+    background-position-x:100%;
+    
+}
+#main-body,#BridalNavBar
+{
+    max-width: 68%;
+    
+}
+#Redirector
+{
+    
+    border: 3px;
+    border-color: black;
+}
+
+body{
+    background-image: url(Data/background12.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#header
+{
+    max-width: 70%;
+    margin: auto;
+}
+
+.card{
+    width: 100%;
+    
+}
+
+
+#MoreOptions>.navbar-nav>.nav-item
+{
+    padding-right: 20px !important;
+}
