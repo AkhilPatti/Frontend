@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="home.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/cdb.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/cdbootstrap/js/cdb.min.js"></script>
@@ -16,7 +17,7 @@
 </head>
 <body>
   <div class="container" id="header" >
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"><img src="Data/logo.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headerSupportedContent" aria-controls="headerSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -27,23 +28,53 @@
             <li class="nav-item active">
               <a class="nav-link" href="#">Welcome Jeffery (Sign Out)</a>
             </li>
-            <li class="d-none d-md-block">|</li>
+            <li class="d-none d-lg-block">|</li>
             <li class="nav-item">
               <a class="nav-link" href="#">My Account</a>
             </li>
-            <li class="d-none d-md-block">|</li>
+            <li class="d-none d-lg-block">|</li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><img src="Data/icon_cart.png" alt="icon_cart">999 Items - $9999.99 Checkout</a>
+              <a class="nav-link" href="#"><img src="Data/icon_cart.png" alt="icon_cart"> 999 Items - $9999.99 Checkout</a>
             </li>
-            <li class="d-none d-md-block">|</li>
+            <li class="d-none d-lg-block">|</li>
             <li class="nav-item">
               <a class="nav-link" href="#">Customer Service</a>
             </li>
+            <!--<li class="nav-item d-lg-none">
+              <a class="nav-link">fuck</a>
+              </li>-->
+              <!---->
+              <li class="nav-item dropdown d-lg-none"id="OurServices">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="true">Our Services</a>
+                <ul class="dropdown-menu" style="background-color: rgba(0, 0, 0, 0.767); ">
+                  <li><a class="dropdown-item" href="#">Dining</a></li>
+                  <li><a class="dropdown-item" href="#">Crystal</a></li>
+                  <li><a class="dropdown-item" href="#">By Brand</a></li>
+                  <li><a class="dropdown-item" href="#">What's new</a></li>
+                  <li><a class="dropdown-item" href="#">Find a Gift</a></li>
+                  <li><a class="dropdown-item" href="#">Wedding Ideas</a></li>
+                  <li><a class="dropdown-item" href="#">Clearrence and Special Offer</a></li>
+                  <form class="form-inline pl-3">
+                    <input class="form-control mr-sm-2" style="height: 20px;" type="search" placeholder="Search Keyword/Item #" aria-label="Search">
+                    <button class="btn bg-light" style="height: 20px;" type="submit">Go</button>
+                  </form>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown d-lg-none"id="OurOffers">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="true">Our Offers</a>
+            <ul class="dropdown-menu" style="background-color: rgba(0, 0, 0, 0.767); ">
+              <li><a class="dropdown-item" href="#">Free Shipping on Orders Over $150</a></li>
+              <li><a class="dropdown-item" href="#">Holiday Platters</a></li>
+              <li><a class="dropdown-item" href="#">Celebrate Thanksgiving</a></li>
+              </ul>
+              </li>
+              
           </ul>
           
         </div>
       </nav></div>
-      <div style="padding-bottom: 2px; padding-top:2px; border-top-style:solid; border-bottom-style:solid; border-width: 2px; border-color: rgba(128, 128, 128, 0.411); ">
+      <div id="Items" style="padding-bottom: 2px; padding-top:2px; border-top-style:solid; border-bottom-style:solid; border-width: 2px; border-color: rgba(128, 128, 128, 0.411); ">
       <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 100%; padding-top:0px !important; padding-bottom:0px;background-color: rgba(128, 128, 128, 0.411) !important;">
         
         
@@ -92,7 +123,7 @@
         
         </nav>
         </div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-bottom: 0%; border-bottom:solid; border-bottom-color: black;border-width: 1px;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="BridalBar"style="padding-bottom: 0%; border-bottom:solid; border-bottom-color: black;border-width: 1px;">
           <div class="container-fluid" id="BridalNavBar" >
           
           <div class="collapse navbar-collapse" id="MoreOptions" style=" color: black;">
@@ -133,18 +164,18 @@
       </div>
       </div>
         <div class="row" id="Redirector" style="background-color: white; border-color:black;border-width: 10px;border-style: solid;">
-          <div class="col-md-6  col-xxl-4 pt-3" id="Redirector-Stemware"><h4 style="font-size:17px;">You'll love our fine stemware collection</h4>
+          <div class="col-md-6  col-lg-4 pt-3" id="Redirector-Stemware"><h4 style="font-size:17px;">You'll love our fine stemware collection</h4>
             <p style="font-size:12px;">Duis autem vel eum iriure dolor in hendrerit vulputate.</p>
           <a href="#" style="float: right;">See all stemware</a>
           </div>
           
-          <div class="col-md-6  col-xxl-4 pt-3" style="border-right-style: solid; border-right-color: rgba(0, 0, 0, 0.068); border-left-style: solid; border-left-color: rgba(0, 0, 0, 0.068);" id="Redirector-HomeAccents">
+          <div class="col-md-6  col-lg-4 pt-3" style="border-right-style: solid; border-right-color: rgba(0, 0, 0, 0.068); border-left-style: solid; border-left-color: rgba(0, 0, 0, 0.068);" id="Redirector-HomeAccents">
           <h4 style="font-size:17px; ">Home accent for the holidays</h4><p style="font-size:12px;">Lorem ipsum dolor in amet, consectetuer adipiscing elit.</p>
           <a href="#" style="float: right;">See all home accents</a>
           </div>
-          <div class="col-md-6 col-xxl-4 pt-3" id="Redirector-ClearenceItems">
-            <h4 style="max-width: 160px; font-size:17px;">Mikasa clearance sale 20% to 80% off</h4><p style="width: 160px; font-size:12px;">ut wisi enim an minim veniam quis nostrud exerci tation.</p>
-            <a href="#" style="padding-bottom: 10px;"> See all clearence items</a>
+          <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 justify-content-center  pt-3" id="Redirector-ClearenceItems">
+            <h4 style="max-width: 45%; font-size:17px;">Mikasa clearance sale 20% to 80% off</h4><p style="width: 160px; font-size:12px;">ut wisi enim an minim veniam quis nostrud exerci tation.</p>
+            <a href="#" style="padding-bottom: 10px;"><p> See all clearence items</p></a>
           </div>
         </div>
         

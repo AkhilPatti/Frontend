@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     background-position: bottom;    
     background-position-x: left;
-    min-height:160px;
+    min-height:170px;
 }
 
 #Redirector-HomeAccents
@@ -12,14 +12,15 @@
     background-image: url(Data/promo_plates.png);
     background-repeat: no-repeat;
     background-position:bottom;
-    min-height:160px;
+    min-height:170px;
 }
 #Redirector-ClearenceItems
 {
     background-image: url(Data/promo_album.png);
     background-repeat: no-repeat;
-    min-height:160px;
+    min-height:170px;
     background-position-x:100%;
+    background-position-y:bottom;
     
 }
 #main-body,#BridalNavBar
@@ -55,4 +56,56 @@ body{
 #MoreOptions>.navbar-nav>.nav-item
 {
     padding-right: 20px !important;
+}
+
+@media screen and (max-width: 1450px)
+{
+    #Redirector-Stemware
+    {
+        min-height: 190px;;
+    }
+}
+/*Media queries*/
+
+@media screen and (max-width: 1200px)
+{
+    #main-body,#BridalNavBar
+    {
+        max-width: 88% !important;
+        
+    } 
+
+    #Items>nav>div
+    {
+        width: 88% !important;
+    }
+
+    #header
+    {
+        max-width:88%;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    #Redirector-ClearenceItems>p,#Redirector-ClearenceItems>a>p
+    {
+        max-width: 49% !important;
+    }
+    
+  }
+@media  screen and (max-width:992px) {
+    #headerSupportedContent>ul
+    { 
+        align-items:unset;
+    }
+    #OurServices>ul>li>a,#OurOffers>ul>li>a
+    {
+        color:white;
+    }
+    #Items,#BridalBar
+    {
+        display: none;
+    }
+
+    
 }
