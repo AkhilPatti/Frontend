@@ -23,6 +23,14 @@
     background-position-y:bottom;
     
 }
+#Redirector>div>a{
+    color:black;
+    text-decoration: none;
+}
+#Redirector>div>p
+{
+    color:grey;
+}
 #main-body,#BridalNavBar
 {
     max-width: 68%;
@@ -47,11 +55,34 @@ body{
     margin: auto;
 }
 
+#headerSupportedContent>ul>li
+{ 
+    padding-right: 8px;
+}
+#navbarSupportedContent>ul>li>a
+{
+    color:rgba(0, 0, 0, 0.692);
+}
 .card{
     width: 100%;
     
 }
-
+#card>div
+{
+    border-style: solid;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+    border-color: rgba(155, 148, 148, 0.863);
+    border-width: 2px;
+    
+}
+#cover-image
+{
+    padding-left: 7px!important;
+    padding-right: 7.5px !important;
+}
 
 #MoreOptions>.navbar-nav>.nav-item
 {
