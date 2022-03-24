@@ -7,6 +7,7 @@
     min-height:170px;
 }
 
+
 #Redirector-HomeAccents
 {
     background-image: url(Data/promo_plates.png);
@@ -24,7 +25,7 @@
     
 }
 #Redirector>div>a{
-    color:black;
+    color: blue;
     text-decoration: none;
 }
 #Redirector>div>p
@@ -67,6 +68,8 @@ body{
     width: 100%;
     
 }
+
+
 #card>div
 {
     border-style: solid;
@@ -89,14 +92,28 @@ body{
     padding-right: 20px !important;
 }
 
-@media screen and (max-width: 1450px)
-{
-    #Redirector-Stemware
-    {
-        min-height: 190px;;
-    }
-}
 /*Media queries*/
+
+
+
+@media  screen and (max-width:992px) {
+    #headerSupportedContent>ul
+    { 
+        align-items:unset;
+    }
+    #OurServices>ul>li>a,#OurOffers>ul>li>a
+    {
+        color:white;
+    }
+    #Items,#BridalBar
+    {
+        display: none;
+    }
+
+    
+}
+
+
 
 @media screen and (max-width: 1200px)
 {
@@ -117,26 +134,57 @@ body{
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1375px)
+{
+    #main-body,#BridalNavBar
+    {
+        max-width: 84% !important;
+        
+    } 
+
+    #Items>nav>div
+    {
+        width: 84% !important;
+    }
+
+    #header
+    {
+        max-width:84%;
+    } 
+}
+
+@media screen and (max-width: 1400px) 
+{
     #Redirector-ClearenceItems>p,#Redirector-ClearenceItems>a>p
     {
         max-width: 49% !important;
     }
     
-  }
-@media  screen and (max-width:992px) {
-    #headerSupportedContent>ul
-    { 
-        align-items:unset;
-    }
-    #OurServices>ul>li>a,#OurOffers>ul>li>a
+}
+
+@media screen and (max-width: 1450px)
+{
+    #Redirector-Stemware
     {
-        color:white;
+        min-height: 190px;;
     }
-    #Items,#BridalBar
+}
+
+@media screen and (max-width: 1152px)
+{
+    #main-body,#BridalNavBar
     {
-        display: none;
+        max-width: 97% !important;
+        
+    } 
+
+    #Items>nav>div
+    {
+        width: 98% !important;
     }
 
-    
+    #header
+    {
+        max-width:97% !important;
+    }
 }
