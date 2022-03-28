@@ -25,7 +25,7 @@
     
 }
 #Redirector>div>a{
-    color: blue;
+    color: /*rgba(33, 33, 66, 0.89);*/#4682b4;
     text-decoration: none;
 }
 #Redirector>div>p
@@ -57,7 +57,7 @@ body{
 }
 
 #headerSupportedContent>ul>li
-{ 
+{
     padding-right: 8px;
 }
 #navbarSupportedContent>ul>li>a
