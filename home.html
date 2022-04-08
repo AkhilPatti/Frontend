@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f5e41c4f71.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <div id="header" class="flex-container;"  style="display: flex;list-style-type: none; width:98%;margin:auto;">
+        
+        <li style="align-self: center;">
+        <img src="Data/brand.png" style="padding-left:10px;height: 50px;width: 180px;"></img></li>
+        <li style="padding-left:3%;"><p style="width: 395px;color:rgba(30, 173, 255, 0.74);margin-bottom:0px;font-size: 30px;margin-top: 0%;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            Employee Directory</p>
+            <p style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size:20px;margin-top: 0px;margin-bottom:0px;">The Ultimate People Directory Experience
+        </p>
+    </li>
+         <li style="margin-left:auto;display:flex;justify-content:right; max-width:max-content;align-self:center;">
+            <p style="color:rgba(30, 173, 255, 0.74);margin-bottom:0px;font-size: 30px;margin-top: 0%;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;align-self:flex-end;margin-right:0px;">
+                Welcome,<span style="color: silver"> Adrew Philips</span></p>
+                <img src="Data/images/Andrew.jfif" style="width:20%;height:20%">
+            </li>
+        
+    </div>
+</header>
+    <aside style="float: left; width: 15%;line-height: 10px; padding-left: 2%;">
+        <div class="Departments" >
+            <p style="font-weight: bold;"id="Dpeartments">Departments</p>
+            <p id="IT">IT<p>
+                <p id="HR" >Human Resources</p>
+                <p id="MD">MD</p>
+                <p id="Sales">Sales</p>
+            </div>
+        <div class="Offices" id="Offices" style="padding-top: 5%; line-height: 10px;">
+            <p style="font-weight: bold;">Offices</p>
+            <p id ="Seatle" >Seatle</p>
+            <p id="India" >India</p>
+        </div>
+        <div class="Job Titles" style="padding-top:5%;line-height: 10px;">
+            <p style="font-weight: bold;">Job Titles</p>
+            <p id="SharePointPracticeHead" > SharePoint Practice Head</p>
+            <p id=".NetDevelopmentLead" >.Net Development Lead</p>
+            <p id="RecruitingExpert" >Recruiting Expert</p>
+            <p id="BIDev" >BI  Developer</p>
+            <p id="BusinessAnalyst" >Business Analyst</p>
+            <p id="viewmore" style="color:rgba(30, 173, 255, 0.74)">view more</p>
+            <div id="AddContent">
+                <p id="OperationsManager">Operatioins Manager</p><p id="UIDeveloper">UI Developer</p>
+            <p id="ProductManager">Product Manager</p>
+            <p id="NetworkEngineer">Network Engineer</p>
+            <p id="SoftwareEngineer">SoftwareEngineer</p>
+            <p id="viewless" style="color:rgba(30, 173, 255, 0.74)" >view less</p>
+            </div>
+        </div>
+        </aside>
+    <section style="width:80%; float:right; margin-right:2%;">
+    <div id="SearchBar">
+    <ul id="alphabets" style="padding-left:0px;"><li><i class="fa-solid fa-user" style='font-size:30px;color:white;'></i></li></ul>
+    <div class="flex-container" style="display: flex;">
+    <form class="flex-container" style="display: flex;">
+        <label style="align-self: center;font-weight:bold;">Search</label>
+        <input type="text" placeholder="Enter any keyword" id="SearchWord" style="margin-left:20px;">
+        <input type="reset" name="Reset" value="Clear" id="ClearSearch">
+        <label style="align-self:center; font-weight:bold; margin-left:40px;" >Filter by</label>
+        <select name="search-items"style="width:150px; margin-left:15px;" id="SearchItems">
+            <option value="firstName">First Name</option>
+            <option value="lastName">Last Name</option>
+            <option value="preferredName">Preferred Name</option>
+            <option value="email">Email</option>
+            <option value="jobTitle">Job Title</option>
+            <option value="office">Office</option>
+            <option value="department">Department</option>
+            <option value="phoneNumber">PhoneNumber</option>
+            <option value="skypeId">Skype Id</option>
+        </select>
+    </form>
+    <button id="AddEmployeeBtn" style="cursor: pointer;">  Add Employee  </button></div>
+    <p><span style="font-weight: bold;">Note:</span> Please use advanced filter options to refine your results</p>
+    </div>
+    <div class="flex-container"style="min-height: max-content; width: 100%; border-width:1px; border-style:solid;" id="SearchResult">
+        
+   
+    </div>
+</section>
+<div id="AddEmployeeForm">
+    <div id="FormBody">
+        <form id="form">
+            <label>First Name</label><input type="text" id="FirstName"placeholder=" Enter your First Name" required>
+            <label>Last Name</label><input type="text" id="LastName"placeholder="Enter your Last Name" required>
+            <label>Email</label><input type="text" id = "Email"placeholder="Email@domain.com" required>
+            <label>Job Title</label><select id="JobTitle" required>
+                <option value=".NetDevelopment Lead">.NetDevelopment Lead</option>
+                <option value="SharePoint Practice Head">SharePoint Practice Head</option>
+                <option value="Recruiting Expert">Recruiting Expert</option>
+                <option value="BI Developer">BI Developer</option>
+                <option value="Business Analyst">Bussiness Analyst</option>
+                <option value="Product Manager">Product Manager</option>
+                <option value="Operations MAnager">Operations Manager</option>
+                <option value="UI Developer"> UI Developer</option>
+                <option value="Network Enginerr">Network Engineer</option>
+                <option value="Software Engineer">Software Engineer</option>
+            </select>
+            <label>Office</label><select id="Office"required><option value="Seatle">Seatle</option>
+                <option value="India">India</option></select>
+            <label>Department</label><select id="Department"required>
+                <option value="IT">IT</option>
+                <option value="HR">Human Resources</option>
+                <option value="MD">MD</option>
+                <option value="Sales">Sales</option>
+            </select>
+            <label>Phone Number</label><input type="text" id="PhoneNumber"placeholder="phoneNumber">
+            <label>Skype ID</label><input type="text" id="SkypeId" placeholder="skypeId">
+            <div><input  type="button" value="submit" id="SubmitForm">
+            <input type="button" value="close" id="CloseForm"></div>
+        </form>
+    </div>
+    </div>
+    <div id="EmployeeInfo" class=flex-container>
+        <div id="FormBody">
+            <div id="EmployeePhoto"style="padding-top:10px;"><img src="" style="margin-left:30% ;height: 225px;width:225px"></div>
+            <form id="form">
+                <label>First Name</label><input type="text" id="EmpFirstName"placeholder=" Enter your First Name" required>
+                <label>Last Name</label><input type="text" id="EmpLastName"placeholder="Enter your Last Name" required>
+                <label>Email</label><input type="text" id = "EmpEmail"placeholder="Email@domain.com" required>
+                <label>Job Title</label><select id="EmpJobTitle" required>
+                    <option value=".NetDevelopment Lead">.NetDevelopment Lead</option>
+                    <option value="SharePoint Practice Head">SharePoint Practice Head</option>
+                    <option value="Recruiting Expert">Recruiting Expert</option>
+                    <option value="BI Developer">BI Developer</option>
+                    <option value="Business Analyst">Bussiness Analyst</option>
+                    <option value="Product Manager">Product Manager</option>
+                    <option value="Operations Manager">Operations Manager</option>
+                    <option value="UI Developer"> UI Developer</option>
+                    <option value="Network Engineer">Network Engineer</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                </select>
+                <label>Office</label><select id="EmpOffice"required><option value="Seatle">Seatle</option>
+                    <option value="India">India</option></select>
+                <label>Department</label><select id="EmpDepartment"required>
+                    <option value="IT">IT</option>
+                    <option value="HR">Human Resources</option>
+                    <option value="MD">MD</option>
+                    <option value="Sales">Sales</option>
+                </select>
+                <label>Phone Number</label><input type="text" id="EmpPhoneNumber"placeholder="phoneNumber">
+                <label>Skype ID</label><input type="text" id="EmpSkypeId" placeholder="skypeId">
+                <div><input  type="button" value="save" id="InfoSubmitForm">
+                <input type="button" value="close" id="InfoCloseForm"></div>
+            </form>
+        </div>
+        </div>
+
+    
+    <script src="home.js"></script>
+</body>
+</html>

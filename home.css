@@ -1,0 +1,223 @@
+#alphabets
+{
+    display:inline-flex;
+    flex-wrap: wrap;
+}
+#alphabets>li
+{
+    background-color: rgba(30, 154, 255, 0.884);
+    color: white;
+    text-align:center;
+    line-height: 40px;
+    font-size:25px;
+    width: 38px;
+    list-style-type:none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 5px;
+    cursor: pointer;
+}
+#header
+{
+    border-bottom-style: solid;
+    border-bottom-width:2px;
+    border-bottom-color:#ccc;
+    padding-bottom:17px;
+}
+#SearchBar>div>form>#ClearSearch
+{
+    width: 72px;
+    height: 34px;
+    background-color: rgba(105,186,0,255);
+    color: white;
+    border: none;
+    margin-left:20px;
+}
+
+#SearchBar>div>form>#SearchWord
+{
+    height: 28px;
+}
+#SearchBar>div>form>select
+{
+    height:34px;
+}
+#SearchBar>div>button
+{
+    height:34px;
+    width: max-content;  margin-left: auto;
+    color:white;
+    background-color:rgba(30, 154, 255, 0.884);
+    border:none;
+    font-weight:600;
+}
+
+#AddEmployeeForm
+{
+    display:none;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    height:100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#AddEmployeeForm>#FormBody
+{
+    background-color:#fefefe;
+    margin:auto;
+    width:80%;
+    overflow: auto;
+    padding-bottom: 15%;
+}
+#AddEmployeeForm>#FormBody>form>input[type=text],#FormBody>form>select{
+    
+        width: 50%;
+        padding: 12px 20px;
+        margin:auto;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      
+}
+#AddEmployeeForm>#FormBody>form>label
+{
+    margin:auto;
+    padding-left:40%;
+    margin-top:20%;
+}
+
+#AddEmployeeForm>#FormBody>form>div>#SubmitForm
+{
+    width: 72px;
+    height: 34px;
+    background-color: rgba(105,186,0,255);
+    color: white;
+    border: none;
+    cursor:pointer;
+}
+#AddEmployeeForm>#FormBody>form>div>#CloseForm
+{
+    width: 72px;
+    height: 34px;
+    background-color:crimson;
+    color: white;
+    border: none;
+    align-items: center;
+    cursor:pointer;
+    margin-left: auto;
+    
+}
+#AddEmployeeForm>#FormBody>form>div
+{
+    display:flex;
+    margin:auto;
+    width: 50%;
+    padding-top:10px;
+    
+}
+#SearchResult>div{
+background-color: rgba(192, 192, 192, 0.432);
+height: 120px;
+width:290px;
+margin-top:5px;
+margin-bottom:10px;
+margin-left:10px;
+}
+#SearchResult>div>#Name
+{
+    font-size:28px;
+    font-weight: bold;
+}
+.flex-container
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-container
+{
+    height: 80%; width: 34%;padding-top: 4%;padding-left:2%;padding-right:2%;padding-bottom: 10%;
+}
+.image-container>img{
+    height:100%; width:100%;
+}
+
+#EmployeeInfo
+{
+    display:none;
+    position:fixed;
+    z-index:1;
+    width:100%;
+    height:100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+aside>div>p
+{
+    cursor: pointer;
+}
+
+#EmployeeInfo>#FormBody
+{
+    background-color:#fefefe;
+    margin:auto;
+    width:80%;
+    overflow: auto;
+    padding-bottom: 15%;
+    border-color: aqua;
+    border-style: solid;
+    border-width: 4px;
+    
+}
+#EmployeeInfo>#FormBody>form>input[type=text],#FormBody>form>select{
+    
+        width: 50%;
+        padding: 12px 20px;
+        margin:auto;
+        display: block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      
+}
+#EmployeeInfo>#FormBody>form>label
+{
+    margin:auto;
+    padding-left:40%;
+    margin-top:20%;
+}
+
+#EmployeeInfo>#FormBody>form>div>#InfoSubmitForm
+{
+    width: 72px;
+    height: 34px;
+    background-color: rgba(105,186,0,255);
+    color: white;
+    border: none;
+    cursor:pointer;
+}
+#EmployeeInfo>#FormBody>form>div>#InfoCloseForm
+{
+    width: 72px;
+    height: 34px;
+    background-color:crimson;
+    color: white;
+    border: none;
+    text-align: center;
+    cursor:pointer;
+    margin-left: auto;
+    display: flex;
+}
+#EmployeeInfo>#FormBody>form>div
+{
+    display:flex;
+    margin:auto;
+    width: 50%;
+    padding-top:10px;
+    
+}
+
+header{
+    padding-bottom:2%;
+}
