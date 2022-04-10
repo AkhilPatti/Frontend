@@ -3,6 +3,7 @@
     display:inline-flex;
     flex-wrap: wrap;
 }
+
 #alphabets>li
 {
     background-color: rgba(30, 154, 255, 0.884);
@@ -14,6 +15,9 @@
     list-style-type:none;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-right: 5px;
+    cursor: pointer;
+}
+#AddContent>p{
     cursor: pointer;
 }
 #header
@@ -156,6 +160,7 @@ margin-left:10px;
 aside>div>p
 {
     cursor: pointer;
+    color:black;
 }
 
 #EmployeeInfo>#FormBody
@@ -204,10 +209,9 @@ aside>div>p
     background-color:crimson;
     color: white;
     border: none;
-    text-align: center;
+    align-items: center;
     cursor:pointer;
     margin-left: auto;
-    display: flex;
 }
 #EmployeeInfo>#FormBody>form>div
 {
