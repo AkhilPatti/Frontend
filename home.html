@@ -81,14 +81,15 @@
     <button id="AddEmployeeBtn" style="cursor: pointer;">  Add Employee  </button></div>
     <p><span style="font-weight: bold;">Note:</span> Please use advanced filter options to refine your results</p>
     </div>
-    <div class="flex-container"style="min-height: max-content; width: 100%; border-width:1px; border-style:solid;" id="SearchResult">
-        
-   
+    <div style="min-height: 400px; width: 100%; border-width:1px; border-style:solid;border-color:silver;">
+    <div class="flex-container"style="min-height: max-content; width: 100%; " id="SearchResult">
+   </div>
     </div>
 </section>
 <div id="AddEmployeeForm">
     <div id="FormBody">
         <form id="form">
+            <!--<input type="file" id="ImgFile" accept="image/png/jpg/jfif" required>-->
             <label>First Name</label><input type="text" id="FirstName"placeholder=" Enter your First Name" required>
             <label>Last Name</label><input type="text" id="LastName"placeholder="Enter your Last Name" required>
             <label>Email</label><input type="text" id = "Email"placeholder="Email@domain.com" required>
@@ -121,8 +122,9 @@
     </div>
     <div id="EmployeeInfo" class=flex-container>
         <div id="FormBody">
-            <div id="EmployeePhoto"style="padding-top:10px;"><img src="" style="margin-left:30% ;height: 225px;width:225px"></div>
+            <div id="EmployeePhoto"style="padding-top:10px;"><img src="" style="margin-left:35% ;height: 225px;width:225px"></div>
             <form id="form">
+                
                 <label>First Name</label><input type="text" id="EmpFirstName"placeholder=" Enter your First Name" required>
                 <label>Last Name</label><input type="text" id="EmpLastName"placeholder="Enter your Last Name" required>
                 <label>Email</label><input type="text" id = "EmpEmail"placeholder="Email@domain.com" required>

@@ -115,9 +115,7 @@ DepartmentIds.forEach(departmentId=>{
 var prevOffice=undefined;
 OfficeIds.forEach(officeId=>{
     var office =document.getElementById(officeId);
-    
     office.onclick=function(){UpdateOffice(office)};
-    
 });
 var prevJobTitle=undefined;
 JobTitleIds.forEach(jobTitleId=>{
@@ -214,14 +212,26 @@ function DisplayPage(employeeList){
         name.appendChild(document.createTextNode(employee["preferredName"]))
         details.appendChild(name);
         var jobTitle=document.createElement('p');
-        jobTitle.style.marginBottom="1px !important";
+        jobTitle.style.marginBottom="0px";
         jobTitle.appendChild(document.createTextNode(employee["jobTitle"]))
         details.appendChild(jobTitle);
         var department=document.createElement('p');
-        department.style.marginTop="0px !imporant";
         department.appendChild(document.createTextNode(employee["department"]+" Department"));
-        
+        department.style.marginTop="0px";
+        department.style.marginBottom="0px";
+        var icons=document.createElement('div');
+        iconpics=['Data/images/call.png','Data/images/message.png','Data/images/popup.png','Data/images/star.png','Data/images/heart.png'];
+        iconpics.forEach(iconurl=>
+            {
+                var icon=document.createElement('img');
+                icon.src=iconurl;
+                icon.style.height="10px;";
+                icon.style.width="15px";
+                icon.style.paddingRight="5px";
+                icons.appendChild(icon);
+            })
         details.appendChild(department);
+        details.appendChild(icons);
         details.style.maxWidth="59%";
         
         let imageContainer=document.createElement('div');
@@ -389,7 +399,7 @@ document.getElementById("CloseForm").onclick=function()
 //Clear
 var clear=document.getElementById("ClearSearch");
 clear.onclick=function()
-{DeleteChildren(SearchResult);
+{DeleteChildren(searchResult);
     DisplayPage(Employees);
     console.log("clicked");
 }
@@ -428,6 +438,10 @@ submitForm.onclick=function()
         return
     }
     console.log(jobTitle.value);
+    /*image=document.getElementById("ImgFile");
+    console.log(this.files);
+    const reader=new FileReader();
+    reader.readAsDataURL(reader.readAsDataURL(this.files[0]));*/
     let Employee={
         "firstName":firstName.value.trim(),
         "lastName":lastName.value.trim(),
@@ -446,12 +460,8 @@ submitForm.onclick=function()
     
     document.getElementById("form").reset();
     EmpForm.style.display="none";
-    Department.style.color="black";
-            JobTitle.style.color="black";
-            Office.style.color="black";
-            JobTitle=undefined;
-            Department=undefined;
-            Office=undefined;
+    ClearFilters();
+            
             DeleteChildren(searchResult);
             DisplayPage(Employees);
     console.log("finish");
