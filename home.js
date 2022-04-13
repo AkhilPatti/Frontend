@@ -106,22 +106,81 @@ var OfficeIds=["India","Seatle"];
 var JobTitleIds=["SharePointPracticeHead",".NetDevelopmentLead","RecruitingExpert","BIDev","BusinessAnalyst","OperationsManager","UIDeveloper","ProductManager","NetworkEngineer","SoftwareEngineer"];
 //Styling Aside Content
 var prevDepartment=undefined;
+var ITCount=7;
+var HRCount=1;
+var MDCount=0;
+var SalesCount=0;
+var SeatleCount=4;
+var IndiaCount=4;
+var SharePointCount=1;
+var DotNetDevCount=1;
+var RecruitingExpertCount=0;
+var BIDevCount=0;
+var BussinessAnalystCount=1;
+var OperationsManagerCount=1;
+var UIDevCount=1;
+var ProductManagerCount=1;
+var NetworkEngineerCount=1;
+var SoftwareEngineerCount=1;
+
 DepartmentIds.forEach(departmentId=>{
     var department =document.getElementById(departmentId);
     
     department.onclick=function(){UpdateDepartment(department)};
+    console.log(departmentId);
+    if(departmentId=="IT")
+    {
+        department.innerText+="("+ITCount+")";
+    }
+    else if(departmentId=="HR")
+    {
+        department.innerText+="("+HRCount+")";
+    }
+    else if(departmentId="MD")
+    {
+        department.innerText+="("+MDCount+")";
+    }
+    else if(departmentId="Sales")
+    {
+        department.innerText+="("+SalesCount+")";
+    }
     
 });
 var prevOffice=undefined;
 OfficeIds.forEach(officeId=>{
+    console.log(officeId);
     var office =document.getElementById(officeId);
     office.onclick=function(){UpdateOffice(office)};
+    if(officeId=="Seatle")
+    {office.innerText+="("+SeatleCount+")";}
+    else if(officeId=="India")
+    {office.innerText+="("+IndiaCount+")";}
 });
 var prevJobTitle=undefined;
 JobTitleIds.forEach(jobTitleId=>{
     var jobTitle =document.getElementById(jobTitleId);
-    
-    jobTitle.onclick=function(){UpdateJobTitle(jobTitle)};
+    jobTitle.onclick=function(){UpdateJobTitle(jobTitle);};
+    console.log(jobTitleId);
+        if(jobTitleId=="SharePointPracticeHead")
+        {jobTitle.innerText+="("+SharePointCount+")";}
+        else if(jobTitleId==".NetDevelopmentLead")
+        {jobTitle.innerText+="("+DotNetDevCount+")";}
+        else if(jobTitleId=="RecruitingExpert")
+        {jobTitle.innerText+="("+RecruitingExpertCount+")";}
+        else if(jobTitleId=="BIDev")
+        {jobTitle.innerText+="("+BIDevCount+")";}
+        else if(jobTitleId=="BusinessAnalyst")
+        {jobTitle.innerText+="("+BussinessAnalystCount+")";}
+        else if(jobTitleId=="OperationsManager")
+        {jobTitle.innerText+="("+OperationsManagerCount+")";}
+        else if(jobTitleId=="UIDeveloper")
+        {jobTitle.innerText+="("+UIDevCount+")";}
+        else if(jobTitleId=="ProductManager")
+        {jobTitle.innerText+="("+ProductManagerCount+")";}
+        else if(jobTitleId=="NetworkEngineer")
+        {jobTitle.innerText+="("+NetworkEngineerCount+")";}
+        else if(jobTitleId=="SoftwareEngineer")
+        {jobTitle.innerText+="("+SoftwareEngineerCount+")";}
     
 });
 function ClearFilters()
@@ -152,7 +211,6 @@ function UpdateDepartment(department)
         else{
             
             department.style.color="rgba(30, 173, 255, 0.74)";
-            console.log(prevDepartment);
             prevDepartment.style.color="black";
         }
         prevDepartment=department;
@@ -195,8 +253,7 @@ function UpdateJobTitle(jobTitle)
         }
         else{
             
-            jobTitle.style.color="rgba(30, 173, 255, 0.74)";
-            
+            jobTitle.style.color="rgba(30, 173, 255, 0.74)";           
             prevJobTitle.style.color="black";
         }
         prevJobTitle=jobTitle;
@@ -204,7 +261,6 @@ function UpdateJobTitle(jobTitle)
 }
 //..
 function DisplayPage(employeeList){
-    console.log(Employees)
     employeeList.forEach(employee => {
     
         var details=document.createElement('div');
@@ -328,7 +384,6 @@ var CloseForm=document.getElementById("InfoCloseForm").onclick=function()
     console.log("This is me",id);
     var form = document.getElementById("EmployeeInfo");
     var empPhoto=document.querySelector("#EmployeePhoto>img")
-    console.log(empPhoto);
     empPhoto.src=Employees[id-1]["imageUrl"];
     form.style.display="block";
     document.getElementById("EmpFirstName").value=Employees[id-1]["firstName"];
@@ -367,11 +422,7 @@ searchItem.onclick=SearchBarFiltering()
 function SearchBarFiltering()
 {
     var currentSearchItem = searchItem.value;
-    //console.log(Employees[0]);
-    console.log(searchWord.value);
-    console.log(Employees);
     var searchResultItems=Employees.filter(s=>(s[currentSearchItem].toLowerCase().startsWith(searchWord.value.toLowerCase())));
-    console.log(searchResultItems);
     DeleteChildren(searchResult);
     DisplayPage(searchResultItems);
     ClearFilters();
@@ -379,7 +430,6 @@ function SearchBarFiltering()
 }
 function DeleteChildren(parent)
 {
-    console.log(parent);
     while (parent.firstChild) {console.log(parent.firstChild);
     parent.removeChild(parent.firstChild);
 }
@@ -401,8 +451,6 @@ image_input.addEventListener('change',function(event){
 function GetDataURL()
 {
     var imageInput=document.getElementById("image_input");
-    console.log("THis");
-    console.log(imageInput.files);
     const reader=new FileReader();
     var URL=undefined;
     reader.addEventListener('load',()=>{
@@ -410,7 +458,7 @@ function GetDataURL()
         return URL;
     });
     reader.readAsDataURL((imageInput.files)[0]);
-    console.log(reader.result);
+    
 }
 //Add Employee Form
 var EmpForm=document.getElementById("AddEmployeeForm");
@@ -428,7 +476,6 @@ var clear=document.getElementById("ClearSearch");
 clear.onclick=function()
 {DeleteChildren(searchResult);
     DisplayPage(Employees);
-    console.log("clicked");
 }
 //Employee Details
 var submitForm=document.getElementById("SubmitForm");
@@ -464,7 +511,6 @@ submitForm.onclick=function()
         alert("Please Enter a Valid Phone Number");
         return
     }
-    console.log(jobTitle.value);
     DataURL=URL;
     URL=undefined;
     console.log('url'.URL);
@@ -473,7 +519,7 @@ submitForm.onclick=function()
         "firstName":firstName.value.trim(),
         "lastName":lastName.value.trim(),
         "preferredName":firstName.value.trim()+" "+lastName.value.trim(),
-        "jobTitle":jobTitle.value,   
+        "jobTitle":jobTitle.value,  
         "office":office.value,
         "department":department.value,
         "email":email.value,
@@ -481,6 +527,16 @@ submitForm.onclick=function()
         "skypeId":skypeId.value,
         "imageUrl":DataURL,
         "id":idCount
+    }
+    if(office.value=="Seatle")
+    {SeatleCount+=1;
+        let sc=document.getElementById("Seatle");
+        sc.innerText=sc.innerText.slice(0,6)+'('+SeatleCount+')';
+    }
+    if(office.value=="India")
+    {SeatleCount+=1;
+        let sc=document.getElementById("India");
+        sc.innerText=sc.innerText.slice(0,5)+'('+IndiaCount+')';
     }
     idCount+=1;
     Employees.push(Employee);
@@ -491,7 +547,6 @@ submitForm.onclick=function()
             
             DeleteChildren(searchResult);
             DisplayPage(Employees);
-    console.log("finish");
 }
 
 var Office=undefined;
@@ -500,7 +555,6 @@ var JobTitle=undefined;
 
 window.onclick=function(event)
 {
-    console.log("Clickd event")
     currentDepartment=undefined;
     currentOffice=undefined;
     currentJobTitle=undefined;
