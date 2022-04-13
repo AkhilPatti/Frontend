@@ -204,6 +204,7 @@ function UpdateJobTitle(jobTitle)
 }
 //..
 function DisplayPage(employeeList){
+    console.log(Employees)
     employeeList.forEach(employee => {
     
         var details=document.createElement('div');
@@ -383,8 +384,34 @@ function DeleteChildren(parent)
     parent.removeChild(parent.firstChild);
 }
 }
+var URL=undefined;
 searchWord.addEventListener('input', SearchBarFiltering);
-
+var image_input = document.querySelector("#image_input");
+var upload_image="";
+image_input.addEventListener('change',function(event){
+    const reader=new FileReader();
+    reader.addEventListener('load',()=>{
+        upload_image=reader.result;
+        document.querySelector("#display_image").src=upload_image;
+        URL=reader.result;
+    });
+    reader.readAsDataURL(this.files[0]);
+});
+//Get Data URL
+function GetDataURL()
+{
+    var imageInput=document.getElementById("image_input");
+    console.log("THis");
+    console.log(imageInput.files);
+    const reader=new FileReader();
+    var URL=undefined;
+    reader.addEventListener('load',()=>{
+        URL=reader.result;
+        return URL;
+    });
+    reader.readAsDataURL((imageInput.files)[0]);
+    console.log(reader.result);
+}
 //Add Employee Form
 var EmpForm=document.getElementById("AddEmployeeForm");
 var AddEmpbtn=document.getElementById("AddEmployeeBtn");
@@ -438,10 +465,10 @@ submitForm.onclick=function()
         return
     }
     console.log(jobTitle.value);
-    /*image=document.getElementById("ImgFile");
-    console.log(this.files);
-    const reader=new FileReader();
-    reader.readAsDataURL(reader.readAsDataURL(this.files[0]));*/
+    DataURL=URL;
+    URL=undefined;
+    console.log('url'.URL);
+    if(DataURL==undefined){DataURL="Data/images/Image.jpg";}
     let Employee={
         "firstName":firstName.value.trim(),
         "lastName":lastName.value.trim(),
@@ -452,7 +479,7 @@ submitForm.onclick=function()
         "email":email.value,
         "phNo":phNo.value,
         "skypeId":skypeId.value,
-        "imageUrl":"Data/images/Image.jpg",
+        "imageUrl":DataURL,
         "id":idCount
     }
     idCount+=1;
