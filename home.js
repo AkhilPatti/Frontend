@@ -533,10 +533,46 @@ submitForm.onclick=function()
         let sc=document.getElementById("Seatle");
         sc.innerText=sc.innerText.slice(0,6)+'('+SeatleCount+')';
     }
-    if(office.value=="India")
+    else if(office.value=="India")
     {SeatleCount+=1;
         let sc=document.getElementById("India");
         sc.innerText=sc.innerText.slice(0,5)+'('+IndiaCount+')';
+    }
+    if(department.value=="IT")
+    {
+        ITCount+=1;
+        let ele=document.getElementById("IT");
+        ele.innerText=ele.innerText.slice(0,2)+'('+SharePointCount+')';
+    }
+    else if(department.value=="Human Resources")
+    {
+        HRCount+=1;
+        let ele=document.getElementById("HumanResources");
+        ele.innerText=ele.innerText.slice(0,14)+'('+DotNetDevCount+')';
+    }
+    else if(department.value=="MD")
+    {
+        MDCount+=1;
+        let ele=document.getElementById("MD");
+        ele.innerText=ele.innerText.slice(0,2)+'('+MDCount+')';
+    }
+    else if(department.value=="Sales")
+    {
+        SalesCount+=1;
+        let ele=document.getElementById("Sales");
+        ele.innerText=ele.innerText.slice(0,5)+'('+SalesCount+')';
+    }
+    if(jobTitle.value=="BI Developer")
+    {
+        BIDevCount+=1;
+        let ele=document.getElementById("BIDev");
+        ele.innerText=ele.innerText.slice(0,12)+'('+BIDevCount+')';
+    }
+    else if(jobTitle.value=="Operations Manager")
+    {
+        OperationsManagerCount+=1;
+        let ele=document.getElementById("OperationsManager");
+        ele.innerText=ele.innerText.slice(0,21)+'('+OperationsManagerCount+')';
     }
     idCount+=1;
     Employees.push(Employee);
@@ -695,4 +731,4 @@ window.onclick=function(event)
     DisplayPage(FilteredEmployees);
     
 }
-//....
+//......
