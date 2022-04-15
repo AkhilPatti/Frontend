@@ -394,6 +394,7 @@ var CloseForm=document.getElementById("InfoCloseForm").onclick=function()
     document.getElementById("EmpDepartment").value=Employees[id-1]["department"];
     document.getElementById("EmpPhoneNumber").value=Employees[id-1]["phNo"];
     document.getElementById("EmpSkypeId").value=Employees[id-1]["skypeId"];
+    
 
 }
     //DisplayPage(Employees);

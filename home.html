@@ -28,19 +28,19 @@
     </div>
 </header>
     <aside style="float: left; width: 15%;line-height: 10px; padding-left: 2%;">
-        <div class="Departments" >
+        <div class="Departments" style="font-family: Arial, Helvetica, sans-serif; font-size: small;" >
             <p style="font-weight: bold;"id="Departments">Departments</p>
-            <p id="IT">IT<p>
+            <p id="IT" >IT<p>
                 <p id="HR" >Human Resources</p>
                 <p id="MD">MD</p>
                 <p id="Sales">Sales</p>
             </div>
-        <div class="Offices" id="Offices" style="padding-top: 5%; line-height: 10px;">
+        <div class="Offices" id="Offices" style="padding-top: 5%; line-height: 10px; font-family: Arial, Helvetica, sans-serif; font-size: small;">
             <p style="font-weight: bold;">Offices</p>
             <p id ="Seatle" >Seatle</p>
             <p id="India" >India</p>
         </div>
-        <div class="Job Titles" style="padding-top:5%;line-height: 10px;">
+        <div class="Job Titles" style="padding-top:5%;line-height: 10px; font-family: Arial, Helvetica, sans-serif; font-size: small;">
             <p style="font-weight: bold;">Job Titles</p>
             <p id="SharePointPracticeHead" > SharePoint Practice Head</p>
             <p id=".NetDevelopmentLead" >.Net Development Lead</p>
@@ -67,9 +67,10 @@
         <input type="reset" name="Reset" value="Clear" id="ClearSearch">
         <label style="align-self:center; font-weight:bold; margin-left:40px;" >Filter by</label>
         <select name="search-items"style="width:150px; margin-left:15px;" id="SearchItems">
+             <option value="preferredName">Preferred Name</option>
             <option value="firstName">First Name</option>
             <option value="lastName">Last Name</option>
-            <option value="preferredName">Preferred Name</option>
+           
             <option value="email">Email</option>
             <option value="jobTitle">Job Title</option>
             <option value="office">Office</option>
@@ -91,9 +92,9 @@
         <form id="form">
             <input type="file" id="image_input" style="margin-left:38%; padding-bottom: 1%;"accept="image/png,image/jpg,image/jfif">
             <div  style="margin-left:30%;padding-top:0%;margin-bottom:1%;width:350px;height:250px;border:1px solid black;"><img id="display_image" style="height:100%;width: 100%;"></div>
-            <label>First Name</label><input type="text" id="FirstName"placeholder=" Enter your First Name" required>
-            <label>Last Name</label><input type="text" id="LastName"placeholder="Enter your Last Name" required>
-            <label>Email</label><input type="text" id = "Email"placeholder="Email@domain.com" required>
+            <input type="text" id="FirstName"placeholder=" Enter your First Name"  style="margin-bottom:20px;"required>
+            <input type="text" id="LastName"placeholder="Enter your Last Name" style ="margin-bottom: 20px;"required>
+            <input type="text" id = "Email"placeholder="Email@domain.com" required>
             <label>Job Title</label><select id="JobTitle" required>
                 <option value=".NetDevelopment Lead">.NetDevelopment Lead</option>
                 <option value="SharePoint Practice Head">SharePoint Practice Head</option>
